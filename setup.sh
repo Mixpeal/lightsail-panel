@@ -7,10 +7,10 @@ set -euo pipefail
 # Usage:
 #   curl -fsSL https://raw.githubusercontent.com/onvad/lightsail-panel/main/setup.sh | sudo bash
 #   or:
-#   git clone https://github.com/onvad/lightsail-panel && cd lightsail-panel && sudo bash setup.sh
+#   git clone https://github.com/Mixpeal/lightsail-panel && cd lightsail-panel && sudo bash setup.sh
 # ------------------------------------------------------------------
 
-REPO_URL="https://github.com/onvad/lightsail-panel.git"
+REPO_URL="https://github.com/Mixpeal/lightsail-panel.git"
 INSTALL_DIR="/opt/lightsail-panel"
 SERVICE_USER="panel"
 SERVICE_NAME="lightsail-panel"
