@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  /* Light mode — "Kiln"
+     Chromatic grays built from ochre/sienna.
+     Primary is deep teal — the complement — so it pops. */
+  --background: #FDFBF8;
+  --background-medium: #F1ECE3;
+  --background-low: #C2B9A8;
+  --background-accent: #D6CFC2;
+  --foreground: #2C2520;
+  --foreground-medium: #857A6D;
+  --foreground-low: #B8AE9F;
+  --foreground-accent: #3E3529;
+
+  --sidebar: #F9F7F3;
+  --border-main: #E3DCD0;
+
+  /* Shared colors */
+  --primary: #2A7C6F;
+  --secondary: #EBF5F3;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-medium: var(--background-medium);
+  --color-background-low: var(--background-low);
+  --color-background-accent: var(--background-accent);
+  --color-foreground: var(--foreground);
+  --color-foreground-medium: var(--foreground-medium);
+  --color-foreground-low: var(--foreground-low);
+  --color-foreground-accent: var(--foreground-accent);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-sidebar: var(--sidebar);
+  --color-border-main: var(--border-main);
+}
+
+/* Auto: system prefers dark and user hasn't forced light */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #131518;
+    --background-medium: #1D2026;
+    --background-low: #6B6E77;
+    --background-accent: #282C34;
+    --foreground: #EDE9E1;
+    --foreground-medium: #A19D94;
+    --foreground-low: #585650;
+    --foreground-accent: #D3CEC5;
+    --sidebar: #181A1D;
+    --border-main: #2F333B;
+  }
+}
+
+/* Manual dark override */
+:root.dark {
+  --background: #131518;
+  --background-medium: #1D2026;
+  --background-low: #6B6E77;
+  --background-accent: #282C34;
+  --foreground: #EDE9E1;
+  --foreground-medium: #A19D94;
+  --foreground-low: #585650;
+  --foreground-accent: #D3CEC5;
+  --sidebar: #181A1D;
+  --border-main: #2F333B;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: Inter, Helvetica, sans-serif;
+}
